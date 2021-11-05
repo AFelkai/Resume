@@ -1,0 +1,205 @@
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,letterpaper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\usepackage{moderncv}
+\usepackage{enumitem}
+\usepackage{scalerel}
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Aaron}
+\familyname{Felkai}
+%\title{Resum� title}                          % optional, remove / comment the line if not wanted
+\address{308 W North Temple}{Apt. 252}{Salt Lake City, UT 84103}    % optional, remove / comment the line if not wanted
+\mobile{(818)~486~0100}                     % optional, remove / comment the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove / comment the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove / comment the line if not wanted
+\email{aaron.felkai@gmail.com}                          % optional, remove / comment the line if not wanted
+%\homepage{github.com/afelkai}                    % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}            % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                  % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                            % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\newcommand\mybitem[1]{%
+   \parbox[t]{72pt}{$\circ$}\parbox[t]{13.65cm}{#1}\\[1.6mm]}
+
+\begin{document}
+%\setlength{\parskip}{2em}
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+%\section{Objective}
+%\cventry{}{\textit{\textmd{A position}}}{}{}{}{}
+
+\section{Skills and Languages}
+\cvitem{Technical Skills}{Software Development, Software Testing, Agile/Scrum, Version Control, System Debug, Quality Assurance, Robotics, System Administration, System Building, Security Clearance: Secret}
+% \cvitem{Tools}{.NET Core and .NET Framework, Git, ActiveMQ, OData, NuGet, PostSharp/AOP, MS Test, VSTS, Postman}
+\cvitem{Languages}{C\#, C++, C, Java, Python}
+\vspace*{-3mm}
+
+\section{Experience}
+
+\cventry[.75em]{January 2021 -- Current}{Software Engineer, Test Equipment Software}{Northrop Grumman Corp.}{Salt Lake City, Utah}{}
+{ {}
+\begin{itemize}
+    \item Designed, developed, documented, and maintained a full-featured testing framework, including a template framework client-generator (C\#).
+    \begin{itemize}
+        \item Sped up development of hardware tests by 80\% by delivering a bootstrapped framework instead of developing a one-off project.
+    \end{itemize}
+    \item Held regular peer reviews and advised on the team's design decisions (Github).
+    \item Integrated automated CI/CD tools for the team's software to speed up accurate development and gain more visibility on the quality of our software (Jenkins, SonarQube, NuGet).
+    \item Developed requirements documents for inter-project commands and protocols.
+    \item Mentored and managed a summer intern.
+\end{itemize}}
+
+\cventry[.75em]{January 2020 -- January 2021}{Associate Software Engineer, UH-60V Black Hawk}{Northrop Grumman Corp.}{Woodland Hills, California}{}
+{ {}
+\begin{itemize}
+    \item Wrote software requirements based test procedures for embedded software applications. (C++, C, Python)
+    \begin{itemize}
+        \item Performed structural coverage analysis to satisfy DO-178C objectives.
+        \item Tested software on both the target hardware and the software development platform.
+    \end{itemize}
+    \item Proposed automated continuous improvement tools for test procedures to drastically reduce setup time and errors, and to speed up development.
+    \item Participated in peer reviews of software, tests, and low level requirements.
+\end{itemize}}
+
+\cventry[.75em]{May 2018 -- Aug 2018}{Software Engineering Intern}{Intel Corp.}{Hillsboro, Oregon}{}
+{ {}
+\begin{itemize}
+    \item Wrote software for managing entitlements in the corporate access management system. This included bulk inserts of 200+ new entitlements. (C\#, Postman, SailPoint IdentityIQ, Angular)
+    \item Developed a proof of concept for consuming and utilizing SAP data of unknown size/shape to resolve legacy API data issues. (OData, JSON, XML, C\#)
+    \item Assisted in making early architecture decisions on Enterprise program to revamp demand and revenue forecasting.
+    \item Added .NET Core support for existing .NET Framework software used in enterprise-wide cloud-based application logging. (.NET Core, C\#, VSTS CI/CD, NuGet)
+    \item Wrote an enterprise framework for easily interacting with a cloud-hosted message broker and deployed it on the company’s artifact repository. (ActiveMQ, C\#, NuGet)
+\end{itemize}}
+
+\cventry[.75em]{June 2017 -- Aug 2017}{Software Engineering Intern}{Intel Corp.}{Hillsboro, Oregon}{}
+{ {}
+\begin{itemize}
+    \item Authored unit tests for testing a web-hosted inventory management system. (C\#, MS Test, VSTS)
+    \begin{itemize}
+        \item Reduced deployment time by over 50\% in 5 different applications while reducing the defect rate by 40\%.
+    \end{itemize}
+    %\item Moved and organized all of the team’s documentation from multiple locations to a centralized point.
+    \item Created an Android app to allow for barcode scanning in an inventory management system with Xamarin.
+\end{itemize}}
+
+
+% \cventry[2em]{Sept 2015 -- Oct 2016}{IT Helpdesk Assistant}{de Toledo High School}{West Hills, California}{}
+% { {}
+% \begin{itemize}
+%   \item Managed helpdesk, ticketing system, and inventory.
+%   \item Diagnosed and resolved issues with computers, projectors, and phone systems.
+%   \item Managed, configured, and maintained hardware/software systems and network infrastructure.
+% \end{itemize}
+% }
+
+% \cventry{April 2015 -- Sept 2015}{Intern}{Stir Works}{Pasadena, California}{}
+% { {}
+% \begin{itemize}
+%   \item Designed test plans and mapped out graphical interfaces for custom operating system.  (Linux, Asana, Jira, BeagleBone)
+%   \item Identified bugs and recommended fixes to developers.
+%   \item Designed and built hardware benchmark tests for optimizing mechanical systems.
+% \end{itemize}
+% }
+\vspace*{-3mm}
+
+%\section{Master Thesis}
+%\cvitem{Title}{\emph{An Iterative Crosstalk Aware Timing Analyzer}}
+%\cvitem{Supervisor}{Dr. Wen-Ben Jone}
+%\cvitem{Description}{This thesis presents an iterative, crosstalk aware timing analyzer. The timing analysis algorithm uses empirical look up tables to model crosstalk noise on any n-line structure.}
+
+
+%\section{Languages}
+%\cvitem{English}{Native}
+%\cvitem{Mandarin}{Conversational}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3}
+
+%\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}              % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}              % 'publications' is the name of a BibTeX file
+
+%\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                         % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\section{Education}
+\cventry[2em]{}{B.S. Computer Science}{GPA: 3.62}{California State University, Northridge}{Northridge, California}{}
+{ {}
+}
+\end{document}
